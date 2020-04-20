@@ -1,1 +1,15 @@
-%h1 トップページ
+
+-if user_signed_in?
+  .login-button
+    %p.user-logout-button 
+      = link_to destroy_user_session_path , method: :delete, class:"registration-text" do
+        ログアウト
+    %p.user-edit-button 
+      = link_to edit_user_registration_path, class: "edit-registration-text" do
+        編集
+-else
+  .login-button
+    %p.user-login-button 
+      = link_to new_user_session_path , class:"registration-text" do
+        ログイン・新規作成
+
