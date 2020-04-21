@@ -16,6 +16,17 @@ ActiveRecord::Schema.define(version: 2020_04_20_224034) do
     t.string "name", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
+    t.string "first_name", null: false
+    t.string "last_name", null: false
+    t.string "first_name_kana", null: false
+    t.string "last_name_kana", null: false
+    t.bigint "phone", null: false
+    t.date "birthday", null: false
+    t.string "postcode", null: false
+    t.string "address_prefecture", null: false
+    t.string "address_city", null: false
+    t.string "address_block", null: false
+    t.string "address_building"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
